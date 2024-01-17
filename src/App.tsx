@@ -1,21 +1,11 @@
 import { useState } from "react";
-import {
-  ResizableHandle,
-  ResizablePanel,
-  ResizablePanelGroup,
-} from "@/components/ui/resizable";
-import "./App.css";
+import ContentContainer from "./components/ContentContainer.tsx";
+import "./index.css";
 function App() {
   return (
-    <>
-      <ResizablePanelGroup direction="horizontal">
-        <ResizablePanel>
-          <div></div>One
-        </ResizablePanel>
-        <ResizableHandle withHandle />
-        <ResizablePanel>Two</ResizablePanel>
-      </ResizablePanelGroup>
-    </>
+    <div className="p-0">
+      <ContentContainer />
+    </div>
   );
 }
 
