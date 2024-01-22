@@ -3,12 +3,8 @@ import {
   ResizablePanel,
   ResizablePanelGroup,
 } from "@/components/ui/resizable";
-import { Input } from "@/components/ui/input";
-import TestInput from "./inputs/TestInput.tsx";
-import PriceInput from "./inputs/PriceInput.tsx";
-import CurrencyInput from "./inputs/CurrencyInput.tsx";
-import ConditionalForms from "./ConditionalFormsTest.tsx";
-import ChangeDiv from "./tests/State.tsx";
+
+import SideBarContent from "./tests/State.tsx";
 
 export default function ContentContainer() {
   return (
@@ -20,8 +16,7 @@ export default function ContentContainer() {
         <ResizablePanel defaultSize={25}>
           <div className="flex flex-h-full p-6">
             <span className="font-semibold flex-col">Sidebar</span>
-            <ChangeDiv />
-            <ConditionalForms />
+            <SideBarContent />
           </div>
         </ResizablePanel>
         <ResizableHandle withHandle />
