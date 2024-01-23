@@ -1,12 +1,20 @@
-function Greeting() {
-  return <>Hekkis</>;
+import { useState } from "react";
+
+function Greeting(props) {
+  return <div>{props.isGreeting ? <div>Hello</div> : <div>Goodbye.</div>}</div>;
 }
+
 function SideBarContent() {
-  const isGreeting = true;
+  const [isGreeting, setIsGreeting] = useState(true);
+  function toggleGreeting() {
+    setIsGreeting((prevIsGreeting) => !prevIsGreeting);
+  }
   return (
     <div>
-      <h1>My Component Example</h1>
-      <Greeting />
+      <button className="bg-slate-200" onClick={toggleGreeting}>
+        Toggle
+      </button>
+      <Greeting isGreeting={isGreeting} />
     </div>
   );
 }

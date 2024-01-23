@@ -4,6 +4,7 @@ import {
   ResizablePanelGroup,
 } from "@/components/ui/resizable";
 
+import SidebarContainer from "./sidebar/SidebarContainer";
 export default function ContentContainer() {
   return (
     <>
@@ -14,7 +15,7 @@ export default function ContentContainer() {
         {/*LEFT PANEL */}
         <ResizablePanel defaultSize={25}>
           <div className="flex flex-h-full p-6">
-            <span className="font-semibold flex-col">Sidebar</span>
+            <SidebarContainer />
           </div>
         </ResizablePanel>
         {/*RIGHT PANEL*/}
