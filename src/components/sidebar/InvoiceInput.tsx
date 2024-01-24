@@ -1,6 +1,7 @@
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "../ui/button";
+import { Calendar } from "@/components/ui/calendar";
 import {
   Card,
   CardContent,
@@ -9,6 +10,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import DatePicker from "../inputs/DatePicker";
+import { Checkbox } from "@/components/ui/checkbox";
+
 function InvoiceInput() {
   return (
     <>
@@ -24,10 +28,17 @@ function InvoiceInput() {
           </div>
 
           <div className="py-2">
-            <Label></Label>
+            <Label>Due Date</Label>
+            <div>
+              <DatePicker></DatePicker>
+            </div>
+            <div className="py-2">
+              <Label>Include VAT</Label>
+              <div>
+                <Checkbox>Include VAT</Checkbox>
+              </div>
+            </div>
           </div>
-
-          <div></div>
         </CardContent>
         <CardFooter>
           <Button>Submit</Button>
