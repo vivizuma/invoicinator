@@ -29,19 +29,34 @@ export default {
 - Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
 
+SPEC:
+
 Features:
 -create html invoice
 -create html receipt
 future features:
 convert html preview to pdf (html2pdf.js src: https://github.com/eKoopmans/html2pdf.js?tab=readme-ov-file#getting-started)
 
+BOTH:
+Your company info:
+name, address(line 1, town, postcode, country), logo, contact
+
+invoice info:
+invoice number
+invoice date
+payment terms in days
+due date
+
+buyer info:
+company/ name, address line 1, town, postcode, country
 Invoicing:
 
 user must be able to input the following:
 
 - amount due
 - service
-- bill to
+- quantity
+- buyer
 
 reciept generator
 
@@ -56,3 +71,20 @@ UI
 sidebar:
 
 Your business
+
+technical how:
+
+how do I process the inputs in react?
+
+I should use state to bring user inputs over to the preview and create components with that state
+
+props should be used to generate each item in the invoice when adding items
+
+todo:
+-Invoice information component which includes::
+--- date picker for invoice
+--- invoice reference number
+--- vat y/n default 20%
+
+- preview section container,
+- a4 preview content section

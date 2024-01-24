@@ -3,6 +3,7 @@ import {
   ResizablePanel,
   ResizablePanelGroup,
 } from "@/components/ui/resizable";
+import MainContainer from "./main/MainContainer";
 
 import SidebarContainer from "./sidebar/SidebarContainer";
 export default function ContentContainer() {
@@ -22,7 +23,7 @@ export default function ContentContainer() {
         <ResizableHandle withHandle />
         <ResizablePanel defaultSize={75}>
           <div className="flex h-full items-center justify-center p-6 bg-gray-200">
-            <span className="font-semibold">Content</span>
+            <MainContainer />
           </div>
         </ResizablePanel>
       </ResizablePanelGroup>
