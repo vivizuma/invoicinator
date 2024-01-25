@@ -58,14 +58,6 @@ user must be able to input the following:
 - quantity
 - buyer
 
-reciept generator
-
-- amount of payment
-- for which service
-- date recieved
-- recieved by
-- recieved from
-
 UI
 
 sidebar:
@@ -80,11 +72,24 @@ I should use state to bring user inputs over to the preview and create component
 
 props should be used to generate each item in the invoice when adding items
 
-todo:
--Invoice information component which includes::
---- date picker for invoice
---- invoice reference number
---- vat y/n default 20%
+todo today ( 15.01.2024 ):
+
+- make main container consistent ratio
+- input validations:
+  --you
+  --them
+  --invoice
+  --add items
+- visual feedback for each section completion
+- input passing to preview
 
 - preview section container,
 - a4 preview content section
+
+reciept generator (((LATER FEATURE)))
+
+- amount of payment
+- for which service
+- date recieved
+- recieved by
+- recieved from

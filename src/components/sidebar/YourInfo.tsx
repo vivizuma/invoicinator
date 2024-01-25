@@ -3,11 +3,11 @@ import { Label } from "@/components/ui/label";
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 function YourInfo() {
   return (
@@ -38,6 +38,9 @@ function YourInfo() {
             <Input type="email"></Input>
           </div>
         </CardContent>
+        <CardFooter>
+          <Button>Submit</Button>
+        </CardFooter>
       </Card>
     </>
   );
