@@ -72,16 +72,20 @@ I should use state to bring user inputs over to the preview and create component
 
 props should be used to generate each item in the invoice when adding items
 
-todo today ( 15.01.2024 ):
+todo today ( 25.01.2024 ):
 
-- make main container consistent ratio
-- input validations:
-  --you
-  --them
-  --invoice
-  --add items
-- visual feedback for each section completion
-- input passing to preview
+- run build ++ done
+- fix build errors ++ done
+- deploy on vercel ++ done
+- make main container consistent ratio ++ Done
+
+todo today (26.01.2024)
+
+- handle input and preview state:
+  --- to share state between componenets, remove state from each component, move it to the
+  nearest common parent and then pass it down to them via props. This is called lifting state up.
+
+- nearest common parent is the content container
 
 - preview section container,
 - a4 preview content section

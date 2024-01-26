@@ -21,7 +21,7 @@ function SidebarContainer() {
         <AccordionItem value="your-information">
           <AccordionTrigger>1. You</AccordionTrigger>
           <AccordionContent>
-            <YourInfo />
+            <YourInfo handleYourNameChange />
           </AccordionContent>
         </AccordionItem>
 

@@ -1,12 +1,20 @@
+import { useState } from "react";
+
 import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
 } from "@/components/ui/resizable";
-import MainContainer from "./main/MainContainer";
+import AspectRatioContainer from "./main/AspectRatioContainer";
 
 import SidebarContainer from "./sidebar/SidebarContainer";
+import Preview from "./main/Preview";
+
 export default function ContentContainer() {
+  const [yourName, setYourName] = useState("");
+  function handleYourNameChange(e) {
+    setYourName(e.target.value);
+  }
   return (
     <>
       <ResizablePanelGroup
@@ -21,10 +29,14 @@ export default function ContentContainer() {
         </ResizablePanel>
         {/*RIGHT PANEL*/}
         <ResizableHandle withHandle />
-        <ResizablePanel defaultSize={75}>
-          <div className="flex h-full items-center justify-center p-6 bg-gray-200">
-            <MainContainer />
-          </div>
+        <ResizablePanel
+          defaultSize={66}
+          maxSize={80}
+          className="bg-gray-300 p-6"
+        >
+          <AspectRatioContainer>
+            <Preview />
+          </AspectRatioContainer>
         </ResizablePanel>
       </ResizablePanelGroup>
     </>
