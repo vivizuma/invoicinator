@@ -10,11 +10,13 @@ import AspectRatioContainer from "./main/AspectRatioContainer";
 import SidebarContainer from "./sidebar/SidebarContainer";
 import Preview from "./main/Preview";
 
-export default function ContentContainer() {
-  const [yourName, setYourName] = useState("");
-  function handleYourNameChange(e) {
-    setYourName(e.target.value);
-  }
+const ContentContainer = () => {
+  const [inputText, setInputText] = useState("");
+
+  const handleInputChange = (text) => {
+    setInputText(text);
+  };
+
   return (
     <>
       <ResizablePanelGroup
@@ -24,7 +26,7 @@ export default function ContentContainer() {
         {/*LEFT PANEL */}
         <ResizablePanel defaultSize={25}>
           <div className="flex flex-h-full p-6">
-            <SidebarContainer />
+            <SidebarContainer onInputChange={handleInputChange} />
           </div>
         </ResizablePanel>
         {/*RIGHT PANEL*/}
@@ -35,10 +37,12 @@ export default function ContentContainer() {
           className="bg-gray-300 p-6"
         >
           <AspectRatioContainer>
-            <Preview />
+            <Preview inputText={inputText} />
           </AspectRatioContainer>
         </ResizablePanel>
       </ResizablePanelGroup>
     </>
   );
-}
+};
+
+export default ContentContainer;

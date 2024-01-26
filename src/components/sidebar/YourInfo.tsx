@@ -9,7 +9,11 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
-function YourInfo() {
+function YourInfo({ onInputChange }) {
+  const handleInput = (e) => {
+    const text = e.target.value;
+    onInputChange(text);
+  };
   return (
     <>
       <Card>
@@ -19,7 +23,11 @@ function YourInfo() {
         <CardContent>
           <div className="py-2">
             <Label>Company Name</Label>
-            <Input type="text" placeholder="Company name"></Input>
+            <Input
+              type="text"
+              placeholder="Company name"
+              onChange={handleInput}
+            ></Input>
           </div>
           <div className="py-2">
             <Label>Address</Label>

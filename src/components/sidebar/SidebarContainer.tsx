@@ -9,7 +9,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-function SidebarContainer() {
+const SidebarContainer = ({ onInputChange }) => {
   return (
     <>
       <Accordion
@@ -21,7 +21,7 @@ function SidebarContainer() {
         <AccordionItem value="your-information">
           <AccordionTrigger>1. You</AccordionTrigger>
           <AccordionContent>
-            <YourInfo handleYourNameChange />
+            <YourInfo onInputChange={onInputChange} />
           </AccordionContent>
         </AccordionItem>
 
@@ -48,6 +48,6 @@ function SidebarContainer() {
       </Accordion>
     </>
   );
-}
+};
 
 export default SidebarContainer;
