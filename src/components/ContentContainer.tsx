@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import {
   ResizableHandle,
   ResizablePanel,
@@ -10,13 +8,7 @@ import AspectRatioContainer from "./main/AspectRatioContainer";
 import SidebarContainer from "./sidebar/SidebarContainer";
 import Preview from "./main/Preview";
 
-const ContentContainer = () => {
-  const [inputText, setInputText] = useState("");
-
-  const handleInputChange = (text) => {
-    setInputText(text);
-  };
-
+function ContentContainer() {
   return (
     <>
       <ResizablePanelGroup
@@ -26,7 +18,7 @@ const ContentContainer = () => {
         {/*LEFT PANEL */}
         <ResizablePanel defaultSize={25}>
           <div className="flex flex-h-full p-6">
-            <SidebarContainer onInputChange={handleInputChange} />
+            <SidebarContainer />
           </div>
         </ResizablePanel>
         {/*RIGHT PANEL*/}
@@ -37,12 +29,12 @@ const ContentContainer = () => {
           className="bg-gray-300 p-6"
         >
           <AspectRatioContainer>
-            <Preview inputText={inputText} />
+            <Preview />
           </AspectRatioContainer>
         </ResizablePanel>
       </ResizablePanelGroup>
     </>
   );
-};
+}
 
 export default ContentContainer;
