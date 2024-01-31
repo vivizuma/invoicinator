@@ -78,3 +78,7 @@
 :root {
   padding: 0px;
 }
+
+.vw-5 {
+  font-size: 5vw;
+}

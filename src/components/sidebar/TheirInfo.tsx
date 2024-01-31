@@ -8,8 +8,17 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { useTheirInfoContext } from "../ContentContainer";
 
 function TheirInfo() {
+  const {
+    theirName,
+    setTheirName,
+    theirAddress,
+    setTheirAddress,
+    theirPostcode,
+    setTheirPostcode,
+  } = useTheirInfoContext();
   return (
     <>
       <Card>
@@ -19,15 +28,28 @@ function TheirInfo() {
         <CardContent>
           <div className="py-2">
             <Label>Name / Company</Label>
-            <Input placeholder="name"></Input>
+            <Input
+              placeholder="name"
+              value={theirName}
+              onChange={(e) => setTheirName(e.target.value)}
+            ></Input>
           </div>
           <div className="py-2">
             <Label>Address</Label>
-            <Input placeholder="123 street Rd"></Input>
+            <Input
+              placeholder="123 street Rd"
+              value={theirAddress}
+              onChange={(e) => setTheirAddress(e.target.value)}
+            ></Input>
           </div>
           <div className="py-2">
             <Label>Postcode</Label>
-            <Input type="text" maxLength={6} />
+            <Input
+              type="text"
+              maxLength={6}
+              value={theirPostcode}
+              onChange={(e) => setTheirPostcode(e.target.value)}
+            />
           </div>
         </CardContent>
         <CardFooter>

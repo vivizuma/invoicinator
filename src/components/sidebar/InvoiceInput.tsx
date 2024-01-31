@@ -1,7 +1,7 @@
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "../ui/button";
-
+import { useInvoiceContext } from "@/contexts/InvoiceContext";
 import {
   Card,
   CardContent,
@@ -10,10 +10,12 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import DatePicker from "../inputs/DatePicker";
+
 import { Checkbox } from "@/components/ui/checkbox";
 
 function InvoiceInput() {
+  const { refNumber, setRefNumber, vat, setVat } = useInvoiceContext();
+
   return (
     <>
       <Card>
@@ -24,14 +26,19 @@ function InvoiceInput() {
         <CardContent>
           <div className="py-2">
             <Label>Reference Number</Label>
-            <Input type="number" placeholder="0" defaultValue={1}></Input>
+            <Input
+              type="number"
+              placeholder="0"
+              value={refNumber}
+              onChange={(e) => {
+                setRefNumber(e.target.value);
+              }}
+            ></Input>
           </div>
 
           <div className="py-2">
             <Label>Due Date</Label>
-            <div>
-              <DatePicker></DatePicker>
-            </div>
+            <div>later</div>
             <div className="py-2">
               <Label>Include VAT</Label>
               <div>

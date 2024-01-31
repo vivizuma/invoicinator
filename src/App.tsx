@@ -1,4 +1,4 @@
-import ContentContainer from "./components/ContentContainer.tsx";
+import { ContentContainer } from "./components/ContentContainer.tsx";
 import Header from "./components/Header.tsx";
 import "./index.css";
 function App() {
