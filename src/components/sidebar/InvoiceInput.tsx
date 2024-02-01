@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/card";
 
 import { Checkbox } from "@/components/ui/checkbox";
-
+import { Textarea } from "../ui/textarea";
 function InvoiceInput() {
   const { refNumber, setRefNumber, vat, setVat } = useInvoiceContext();
 
@@ -46,6 +46,12 @@ function InvoiceInput() {
               </div>
             </div>
           </div>
+          <Label>Introduction to Invoice</Label>
+          <CardDescription>
+            A brief text summary of the invoice, and any other information you
+            would like to display
+          </CardDescription>
+          <Textarea />
         </CardContent>
         <CardFooter>
           <Button>Submit</Button>
