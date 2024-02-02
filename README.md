@@ -68,7 +68,9 @@ technical how:
 
 how do I process the inputs in react?
 
-I should use state to bring user inputs over to the preview and create components with that state
+use used the react hook useState to accomplish this. However prop drilling was tedious and would be a potent-
+ial nightmare to maintain. I used contexts to handle this. Which, using a provider, automatically drills down to
+the necessary components that would use the props passed.
 
 props should be used to generate each item in the invoice when adding items
 
@@ -89,6 +91,15 @@ todo today (26.01.2024)
 
 - preview section container,
 - a4 preview content section
+
+todo today: 01.02.24
+
+- pseudocode text scaling algo
+- look into other tools I could use
+
+SCALING:
+
+- what proportion to a4 are the text sizes: 18pt header, 14pt titles, 12pt text
 
 reciept generator (((LATER FEATURE)))
 

@@ -16,7 +16,7 @@ function SidebarContainer() {
         type="single"
         defaultValue="your-information"
         collapsible
-        className="w-full"
+        className="w-full text-white text-lg rounded-none"
       >
         <AccordionItem value="your-information">
           <AccordionTrigger>1. You</AccordionTrigger>
