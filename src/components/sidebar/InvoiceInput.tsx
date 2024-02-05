@@ -60,4 +60,9 @@ function InvoiceInput() {
     </>
   );
 }
+
+const stagedItems = [];
+function createItem() {
+  constructor;
+}
 export default InvoiceInput;

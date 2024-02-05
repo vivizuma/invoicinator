@@ -24,10 +24,10 @@ import "./styles/LeftPanel.css";
 function ContentContainer() {
   return (
     <>
-      <InvoiceProvider>
-        <TheirInfoProvider>
-          <YourInfoProvider>
-            <AddItemProvider>
+      <AddItemProvider>
+        <InvoiceProvider>
+          <TheirInfoProvider>
+            <YourInfoProvider>
               <ResizablePanelGroup
                 direction="horizontal"
                 className="min-h-screen max-w-screen min-w-screen rounded-lg bg-gray-600"
@@ -50,10 +50,10 @@ function ContentContainer() {
                   </AspectRatioContainer>
                 </ResizablePanel>
               </ResizablePanelGroup>
-            </AddItemProvider>
-          </YourInfoProvider>
-        </TheirInfoProvider>
-      </InvoiceProvider>
+            </YourInfoProvider>
+          </TheirInfoProvider>
+        </InvoiceProvider>
+      </AddItemProvider>
     </>
   );
 }

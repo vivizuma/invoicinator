@@ -3,6 +3,7 @@ import { useState, useContext, createContext } from "react";
 const AddItemContext = createContext();
 
 function AddItemProvider({ children }) {
+  const [items, setItems] = useState([]);
   const [amountDue, setAmountDue] = useState(0);
   const [product, setProduct] = useState("");
   const [quantity, setQuantity] = useState(0);
@@ -16,6 +17,8 @@ function AddItemProvider({ children }) {
         setProduct,
         quantity,
         setQuantity,
+        items,
+        setItems,
       }}
     >
       {children}

@@ -36,7 +36,6 @@ function Preview() {
             <p>{refNumber}</p>
           </div>
         </div>
-        <TypographyTable />
       </div>
     </div>
   );

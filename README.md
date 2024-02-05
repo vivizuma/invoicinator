@@ -101,7 +101,12 @@ SCALING:
 
 - what proportion to a4 are the text sizes: 18pt header, 14pt titles, 12pt text
 
-reciept generator (((LATER FEATURE)))
+LATER FEATURES
+html to pdf:
+
+https://github.com/eKoopmans/html2pdf.js?tab=readme-ov-file#getting-started
+
+reciept generator
 
 - amount of payment
 - for which service
