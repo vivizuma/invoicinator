@@ -4,10 +4,12 @@ const InvoiceContext = createContext();
 
 function InvoiceProvider({ children }) {
   const [refNumber, setRefNumber] = useState(0);
-
+  const [date, setDate] = useState<Date>();
   const [vat, setVat] = useState(false);
   return (
-    <InvoiceContext.Provider value={{ refNumber, setRefNumber, vat, setVat }}>
+    <InvoiceContext.Provider
+      value={{ refNumber, setRefNumber, vat, setVat, date, setDate }}
+    >
       {children}
     </InvoiceContext.Provider>
   );
