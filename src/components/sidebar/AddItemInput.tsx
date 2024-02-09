@@ -18,7 +18,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 
-import { useAddItemContext } from "../ContentContainer";
+import { useAddItemContext } from "@/contexts/AddItemContext";
 
 function AddItemInput() {
   const {
@@ -30,6 +30,10 @@ function AddItemInput() {
     setQuantity,
     items,
     setItems,
+    itemTotal,
+    setItemTotal,
+    sumTotal,
+    setSumTotal,
   } = useAddItemContext();
   function handleAddItem() {
     console.log("handling add item");
@@ -37,17 +41,31 @@ function AddItemInput() {
       amountDue: amountDue,
       product: product,
       quantity: quantity,
+      itemTotal: CalculateItemTotal(amountDue, quantity),
     };
-    console.log(newItem);
-    setItems((i) => [...items, newItem]);
-    console.log(items);
+    // update the items state
+    setItems((prevItems) => [...prevItems, newItem]);
+    //use updater function to retrieve the most up to date state
+    setSumTotal(calculateSumTotal([...items, newItem]));
     setProduct("");
     setAmountDue(0);
     setQuantity(0);
   }
+  function calculateSumTotal(items) {
+    let calcSumTotal = 0;
+    items.forEach((item) => {
+      calcSumTotal = calcSumTotal + item.itemTotal;
+      console.log(calcSumTotal);
+    });
+    return calcSumTotal;
+  }
   function removeItem(index) {
     console.log(`"removing" ${index}`);
     setItems((i) => i.filter((_, i) => i !== index));
+  }
+
+  function CalculateItemTotal(a, b) {
+    return a * b;
   }
   return (
     <>

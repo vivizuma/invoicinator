@@ -97,10 +97,6 @@ todo today: 01.02.24
 - pseudocode text scaling algo
 - look into other tools I could use
 
-SCALING:
-
-- what proportion to a4 are the text sizes: 18pt header, 14pt titles, 12pt text
-
 LATER FEATURES
 html to pdf:
 
@@ -113,3 +109,7 @@ reciept generator
 - date recieved
 - recieved by
 - recieved from
+
+SCALING:
+
+- add media queries for a mobile layout
