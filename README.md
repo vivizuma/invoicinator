@@ -29,6 +29,13 @@ export default {
 - Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
 
+NEXT FEATURES TO WORK ON:
+
+- select due date
+- VAT
+- HTML to PDF
+- change submit buttons to "next" buttons, which opens the next accordion item
+
 SPEC:
 
 Features:

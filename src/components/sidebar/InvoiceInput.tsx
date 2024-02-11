@@ -45,7 +45,7 @@ function InvoiceInput() {
               placeholder="0"
               value={refNumber}
               onChange={(e) => {
-                setRefNumber(e.target.value);
+                setRefNumber(Number(e.target.value));
               }}
             ></Input>
           </div>

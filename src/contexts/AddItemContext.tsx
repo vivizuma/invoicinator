@@ -1,9 +1,25 @@
 import { useState, useContext, createContext } from "react";
+interface AddItemContextValue {
+  amountDue: number;
+  setAmountDue: (value: number) => void;
+  product: string;
+  setProduct: (value: string) => void;
+  quantity: number;
+  setQuantity: (value: number) => void;
+  items: any;
+  setItems: (value: any) => void;
+  itemTotal: number;
+  setItemTotal: (value: number) => void;
+  sumTotal: number;
+  setSumTotal: (value: number) => void;
+}
 
-const AddItemContext = createContext();
+const AddItemContext = createContext<AddItemContextValue | undefined>(
+  undefined
+);
 
 function AddItemProvider({ children }) {
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState<any>([]);
   const [amountDue, setAmountDue] = useState(0);
   const [product, setProduct] = useState("");
   const [quantity, setQuantity] = useState(0);

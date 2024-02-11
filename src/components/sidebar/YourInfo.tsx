@@ -67,7 +67,7 @@ function YourInfo() {
             <Input
               type="number"
               value={yourPhoneNumber}
-              onChange={(e) => setYourPhoneNumber(e.target.value)}
+              onChange={(e) => setYourPhoneNumber(Number(e.target.value))}
             ></Input>
           </div>
           <div className="py-2">

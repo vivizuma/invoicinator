@@ -1,6 +1,16 @@
 import { createContext, useContext, useState } from "react";
+interface invoiceContextValue {
+  refNumber: number;
+  setRefNumber: (value: number) => void;
+  date: any;
+  setDate: (value: any) => void;
+  vat: boolean;
+  setVat: (value: boolean) => void;
+}
 
-const InvoiceContext = createContext();
+const InvoiceContext = createContext<invoiceContextValue | undefined>(
+  undefined
+);
 
 function InvoiceProvider({ children }) {
   const [refNumber, setRefNumber] = useState(0);

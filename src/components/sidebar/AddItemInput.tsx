@@ -83,7 +83,7 @@ function AddItemInput() {
               placeholder="00.00"
               value={amountDue}
               onChange={(e) => {
-                setAmountDue(e.target.value);
+                setAmountDue(Number(e.target.value));
               }}
             />
           </div>
@@ -110,7 +110,7 @@ function AddItemInput() {
               maxLength={8}
               value={quantity}
               onChange={(e) => {
-                setQuantity(e.target.value);
+                setQuantity(Number(e.target.value));
               }}
             />
           </div>

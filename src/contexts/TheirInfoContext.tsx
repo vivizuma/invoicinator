@@ -1,6 +1,15 @@
 import { createContext, useContext, useState } from "react";
-
-const TheirInfoContext = createContext();
+interface theirInfoContextValue {
+  theirName: string;
+  setTheirName: (value: string) => void;
+  theirAddress: string;
+  setTheirAddress: (value: string) => void;
+  theirPostcode: string;
+  setTheirPostcode: (value: string) => void;
+}
+const TheirInfoContext = createContext<theirInfoContextValue | undefined>(
+  undefined
+);
 
 function TheirInfoProvider({ children }) {
   const [theirName, setTheirName] = useState("");
