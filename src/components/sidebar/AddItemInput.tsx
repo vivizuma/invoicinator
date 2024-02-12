@@ -42,7 +42,9 @@ function AddItemInput() {
       product: product,
       quantity: quantity,
       itemTotal: CalculateItemTotal(amountDue, quantity),
+      id: self.crypto.randomUUID(),
     };
+    console.log(newItem.id);
     // update the items state
     setItems((prevItems) => [...prevItems, newItem]);
     //use updater function to retrieve the most up to date state
@@ -59,9 +61,9 @@ function AddItemInput() {
     });
     return calcSumTotal;
   }
-  function removeItem(index) {
-    console.log(`"removing" ${index}`);
-    setItems((i) => i.filter((_, i) => i !== index));
+  function removeItem(id) {
+    console.log(`"removing" ${id}`);
+    setItems((i) => i.filter((_, i) => i !== id));
   }
 
   function CalculateItemTotal(a, b) {
@@ -137,15 +139,15 @@ function AddItemInput() {
               </TableRow>
             </TableHeader>
             <TableBody>
-              {items.map((item, index) => (
-                <TableRow key={index}>
+              {items.map((item, id) => (
+                <TableRow key={id}>
                   <TableCell>{item.product}</TableCell>
                   <TableCell>{item.amountDue}</TableCell>
                   <TableCell>{item.quantity}</TableCell>
                   <TableCell>
                     <Button
                       variant="destructive"
-                      onClick={() => removeItem(index)}
+                      onClick={() => removeItem(id)}
                     >
                       Delete
                     </Button>
