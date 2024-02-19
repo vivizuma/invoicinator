@@ -34,16 +34,16 @@ function Preview() {
       </div>
       <div className="col-start-1 col-span-4 row-start-2 px-2">
         <p className="font-bold">name{name}</p>
-        <p>add{yourAddress}</p>
-        <p>pc{yourPostcode}</p>
-        <p>tel{yourPhoneNumber}</p>
-        <p>email{yourEmail}</p>
+        <p>{yourAddress}</p>
+        <p>{yourPostcode}</p>
+        <p>{yourPhoneNumber}</p>
+        <p>{yourEmail}</p>
       </div>
       <div className="col-start-6 col-end-9 row-start-2">
         <div>
           <h3 className="font-bold font-xl ">Bill To</h3>
-          <p className="font-bold">billy{theirName}</p>
-          <p>bignuts lane{theirAddress}</p>
+          <p className="font-bold">{theirName}</p>
+          <p>{theirAddress}</p>
           <p>{theirPostcode}</p>
         </div>
       </div>
